@@ -6,3 +6,11 @@ module.exports = function(eleventyConfig) {
         },
     };
 };
+
+module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addCollection("posts", function(collection) {
+        return collection.getFilteredByGlob("posts/**/*.md");
+    });
+
+}
